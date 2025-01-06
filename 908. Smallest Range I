@@ -1,0 +1,13 @@
+908. Smallest Range I
+Java
+class Solution {
+    public int smallestRangeI(int[] nums, int k) {
+        int ma=0;
+        int mi=10000;
+        for(int v : nums){
+            ma = Math.max(ma,v);
+            mi = Math.min(mi,v);
+        }
+        return Math.max(0, ma - mi - k * 2);
+    }
+}
